@@ -1,4 +1,3 @@
-// Generated on 2013-09-03 using generator-ember 0.6.2
 'use strict';
 var LIVERELOAD_PORT = 35729;
 var lrSnippet = require('connect-livereload')({port: LIVERELOAD_PORT});
@@ -93,7 +92,8 @@ module.exports = function (grunt) {
                 options: {
                     middleware: function (connect) {
                         return [
-                            connect().use('/api', express),
+                            connect.compress(),
+                            connect().use('/api', apiApp),
                             mountFolder(connect, yeomanConfig.dist)
                         ];
                     }
