@@ -1,0 +1,3 @@
+EmberClinica.Router.map(function () {
+  
+});
