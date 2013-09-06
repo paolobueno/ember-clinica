@@ -353,7 +353,7 @@ module.exports = function (grunt) {
         'concurrent:test',
         'connect:test',
         'neuter:app',
-        'mocha'
+        'karma'
     ]);
 
     grunt.registerTask('build', [
